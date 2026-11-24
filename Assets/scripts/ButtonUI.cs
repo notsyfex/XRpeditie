@@ -13,7 +13,8 @@ public class ButtonUI : MonoBehaviour
     }
     
     private UiState _currentState = UiState.StartMenu;
-    public bool IsStartActivated = false;
+    public AnimationManager StartAnimation;
+
     public void RedButton()
     {
        if(_currentState == UiState.Default)
@@ -28,7 +29,7 @@ public class ButtonUI : MonoBehaviour
         if (_currentState == UiState.StartMenu)
         {
             _currentState = UiState.Default;
-            IsStartActivated = true;
+            StartAnimation.IsStartActivated = true;
         }
         Debug.Log(_currentState);
     }
@@ -47,7 +48,7 @@ public class ButtonUI : MonoBehaviour
         if (_currentState == UiState.StartMenu)
         {
             _currentState = UiState.Default;
-            IsStartActivated = true;
+            StartAnimation.IsStartActivated = true;
         }
         Debug.Log(_currentState);
     }
@@ -66,7 +67,7 @@ public class ButtonUI : MonoBehaviour
         if (_currentState == UiState.StartMenu)
         {
             _currentState = UiState.Default;
-            IsStartActivated = true;
+            StartAnimation.IsStartActivated = true;
         }
         Debug.Log(_currentState);
     }
@@ -85,7 +86,7 @@ public class ButtonUI : MonoBehaviour
         if (_currentState == UiState.StartMenu)
         {
             _currentState = UiState.Default;
-            IsStartActivated = true;
+            StartAnimation.IsStartActivated = true;
         }
         Debug.Log(_currentState);
     }
