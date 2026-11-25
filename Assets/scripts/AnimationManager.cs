@@ -13,6 +13,7 @@ public class AnimationManager : MonoBehaviour
         if (IsStartActivated)
         {
             animator.SetBool("StartMenuUnlock", true);
+
         }
     }
 }

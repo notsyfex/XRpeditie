@@ -433,7 +433,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 35d7de334527dbb4a95b021ae20dc005, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ButtonUI
-  IsStartActivated: 0
+  StartAnimation: {fileID: 0}
 --- !u!4 &333539837
 Transform:
   m_ObjectHideFlags: 0
@@ -461,6 +461,7 @@ GameObject:
   - component: {fileID: 384190434}
   - component: {fileID: 384190433}
   - component: {fileID: 384190435}
+  - component: {fileID: 384190436}
   m_Layer: 5
   m_Name: PlaceHolder
   m_TagString: Untagged
@@ -547,6 +548,19 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &384190436
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 384190431}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f40a71faf46f62342998b06c26d09888, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::AnimationManager
+  IsStartActivated: 0
 --- !u!1 &863715855
 GameObject:
   m_ObjectHideFlags: 0

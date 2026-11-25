@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class ButtonUI : MonoBehaviour
 {
-    enum UiState
+     public enum UiState
     {
         StartMenu,
         Default,
@@ -13,11 +13,19 @@ public class ButtonUI : MonoBehaviour
     }
     
     private UiState _currentState = UiState.StartMenu;
+    public UiState CurrentState => _currentState;
     public AnimationManager StartAnimation;
 
     public void RedButton()
     {
-       if(_currentState == UiState.Default)
+        // activates start animation if pressed
+        if (_currentState == UiState.StartMenu)
+        {
+            _currentState = UiState.Default;
+            StartAnimation.IsStartActivated = true;
+        }
+        //redmenu toggle
+        if (_currentState == UiState.Default)
         {
             _currentState = UiState.RedMenu;
         }
@@ -25,18 +33,18 @@ public class ButtonUI : MonoBehaviour
         {
             _currentState = UiState.Default;
         }
+        Debug.Log(_currentState);
+    }
+    public void BlueButton()
+    {
         // activates start animation if pressed
         if (_currentState == UiState.StartMenu)
         {
             _currentState = UiState.Default;
             StartAnimation.IsStartActivated = true;
         }
-        Debug.Log(_currentState);
-    }
-    public void BlueButton()
-    {
         //toggles blue on/off
-        if(_currentState == UiState.RedMenu)
+        if (_currentState == UiState.RedMenu)
         {
             _currentState = UiState.BlueSubMenu;
         }
@@ -44,16 +52,16 @@ public class ButtonUI : MonoBehaviour
         {
             _currentState = UiState.RedMenu;
         }
+        Debug.Log(_currentState);
+    }
+    public void YellowButton()
+    {
         // activates start animation if pressed
         if (_currentState == UiState.StartMenu)
         {
             _currentState = UiState.Default;
             StartAnimation.IsStartActivated = true;
         }
-        Debug.Log(_currentState);
-    }
-    public void YellowButton()
-    {
         //toggles yellow on/off
         if (_currentState == UiState.RedMenu)
         {
@@ -63,16 +71,16 @@ public class ButtonUI : MonoBehaviour
         {
             _currentState = UiState.RedMenu;
         }
+        Debug.Log(_currentState);
+    }
+    public void GreenButton()
+    {
         // activates start animation if pressed
         if (_currentState == UiState.StartMenu)
         {
             _currentState = UiState.Default;
             StartAnimation.IsStartActivated = true;
         }
-        Debug.Log(_currentState);
-    }
-    public void GreenButton()
-    {
         //toggles green on/off
         if (_currentState == UiState.RedMenu)
         {
@@ -81,12 +89,6 @@ public class ButtonUI : MonoBehaviour
         else if (_currentState == UiState.GreenSubMenu)
         {
             _currentState = UiState.RedMenu;
-        }
-        // activates start animation if pressed
-        if (_currentState == UiState.StartMenu)
-        {
-            _currentState = UiState.Default;
-            StartAnimation.IsStartActivated = true;
         }
         Debug.Log(_currentState);
     }
