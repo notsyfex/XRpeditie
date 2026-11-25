@@ -1,3 +1,5 @@
+using NUnit.Framework.Constraints;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.Rendering;
@@ -6,36 +8,58 @@ public class LightSwitch : MonoBehaviour
 {
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     public Volume LightVolume;
-    public InputActionReference _lightAction;
+    public InputActionReference LightAction;
+
+    private bool _isNight;
+    private float _targetWeight;
+
+    [SerializeField] private float _transitionSpeed = 2f;
+
     void Start()
     {
-        //LightVolume = GetComponent<Volume>();
-        //_lightAction = GetComponent<InputAction>();
+        _targetWeight = 0f; //Sets the target weight to zero, it will look for the smalest weight then count down.
+        _isNight = false;
     }
 
     private void OnEnable()
     {
-        _lightAction.action.Enable();
+        LightAction.action.Enable();
     }
 
     private void OnDisable()
     {
-        _lightAction.action.Disable();
+        LightAction.action.Disable();
     }
 
     // Update is called once per frame
-    void Update()
+    private void Update()
     {
-        if (_lightAction.action.WasPressedThisFrame())
+        if (LightAction.action.WasPressedThisFrame())
         {
             DayToNight();
         }
+
+        // Smooth transition
+        LightVolume.weight = Mathf.MoveTowards(
+            LightVolume.weight,
+            _targetWeight, //look for where the darkness needs to go
+            _transitionSpeed * Time.deltaTime //speed of how fast it becomes lighter or darker
+        );
     }
-
-
     void DayToNight()
     {
-        //Lightvolume.weight eraf halen door 
-        LightVolume.weight = 1;
+            _isNight = !_isNight;
+
+            if (_isNight)
+            {
+                _targetWeight = 1;
+                Debug.Log("nighty night");
+            }
+            else
+            {
+
+                _targetWeight = 0;
+                Debug.Log("morning");
+            }
     }
 }
