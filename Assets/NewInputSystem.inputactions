@@ -1,0 +1,95 @@
+{
+    "version": 1,
+    "name": "NewInputSystem",
+    "maps": [
+        {
+            "name": "arduino Inputs",
+            "id": "356d037e-42da-4598-8812-338c514678ea",
+            "actions": [
+                {
+                    "name": "RedButton",
+                    "type": "Button",
+                    "id": "9ea1013e-7c40-4390-947b-9d680d67e21f",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "BlueButton",
+                    "type": "Button",
+                    "id": "5d2368cb-91b7-4e57-9e85-6a1ee1a6a954",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "YellowButton",
+                    "type": "Button",
+                    "id": "6f921234-d259-43fe-ab70-104b0c57a0c8",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "GreenButton",
+                    "type": "Button",
+                    "id": "5812e3c7-0334-40a6-9976-9a7653c00020",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "72826c25-9edc-4dbc-95d0-4ce3a5755abf",
+                    "path": "<Keyboard>/1",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "RedButton",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "3de78959-2b93-4d01-8e91-1af898f79330",
+                    "path": "<Keyboard>/2",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "BlueButton",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "6eb25897-ecdb-4e49-95b2-73a80acc148c",
+                    "path": "<Keyboard>/3",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "YellowButton",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "1134c7d7-6c8b-4261-900c-14c5e62ff57c",
+                    "path": "<Keyboard>/4",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "GreenButton",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}

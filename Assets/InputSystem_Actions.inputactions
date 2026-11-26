@@ -10,9 +10,15 @@
                     "name": "LightSwitch",
                     "type": "Button",
                     "id": "6d974ee7-8527-459b-9ab9-764a284c553a",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
                     "name": "RedButton",
                     "type": "Button",
-                    "id": "54f264bf-daae-4327-8c80-46ea5a9fcdd7",
+                    "id": "bef7bd06-bfa0-44c5-81a2-cd0ee616723b",
                     "expectedControlType": "",
                     "processors": "",
                     "interactions": "",
@@ -50,13 +56,11 @@
                 {
                     "name": "",
                     "id": "521e2bac-ed09-4196-be56-efc073502375",
-                    "id": "33c58d3d-311f-48e2-a886-20ae8d2f6eab",
                     "path": "",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
                     "action": "LightSwitch",
-                    "action": "RedButton",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
@@ -68,12 +72,6 @@
                     "processors": "",
                     "groups": ";Keyboard&Mouse",
                     "action": "LightSwitch",
-                    "id": "50c198ed-5f94-4f36-b89e-26c711c2fd27",
-                    "path": "<Keyboard>/1",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": ";Keyboard&Mouse",
-                    "action": "RedButton",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
@@ -140,6 +138,28 @@
                     "processors": "",
                     "groups": ";Keyboard&Mouse",
                     "action": "GreenButton",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "5841608d-3a72-4375-8cf2-3702b6a96912",
+                    "path": "",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "RedButton",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "d37c025d-38e6-4a6e-a3ce-746e94e6366f",
+                    "path": "<Keyboard>/1",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": ";Keyboard&Mouse",
+                    "action": "RedButton",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
