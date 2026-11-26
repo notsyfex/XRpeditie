@@ -14,6 +14,7 @@ public class LightSwitch : MonoBehaviour
     private float _targetWeight;
 
     [SerializeField] private float _transitionSpeed = 2f;
+    [SerializeField] SunAndMoonMovement sunAndMoonMovement;
 
     void Start()
     {
@@ -48,18 +49,19 @@ public class LightSwitch : MonoBehaviour
     }
     void DayToNight()
     {
-            _isNight = !_isNight;
+        _isNight = !_isNight;
 
-            if (_isNight)
-            {
-                _targetWeight = 1;
-                Debug.Log("nighty night");
-            }
-            else
-            {
-
-                _targetWeight = 0;
-                Debug.Log("morning");
-            }
+        if (_isNight)
+        {
+            _targetWeight = 1;
+            Debug.Log("nighty night");
+            sunAndMoonMovement.AnimationsForSun();
+        }
+        else
+        {
+            sunAndMoonMovement.AnimationForMoon();
+            _targetWeight = 0;
+            Debug.Log("morning");
+        }
     }
 }
